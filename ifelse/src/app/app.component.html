@@ -1,0 +1,23 @@
+Welcome to if else
+<div *ngIf="true">
+  Welcome
+</div>
+{{flag}}
+<input type="button" 
+value="{{flag== true ? 'Hide' : 'Show'}}" (click)="flag=!flag"/>
+<br/>
+<br/>
+<img src="../assets/smile.png" width="100px" *ngIf="flag"/>
+<input type="button" value="Registration" (click)="flag2=true"/>
+<input type="button" value="Login" (click)="flag2=false"/>
+<br >
+<div *ngIf="flag2"><h1>Registration</h1></div>
+<div *ngIf="!flag2"><h1>Login</h1></div>  
+<li *ngFor="let item of arr">{{item + 10}}</li>
+<select>
+  <option value="">Select</option>
+  <option *ngFor="let ct of cities;let i=index">{{ct}}</option>
+</select>
+<input type="text" [(ngModel)]="txtCity"/>
+<input type="button" value="Add Item" (click)="cities.push(txtCity)" />
+{{txtCity}}
