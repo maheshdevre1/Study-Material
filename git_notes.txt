@@ -1,1 +1,38 @@
 Git Notes
+----------
+
+✅ Steps to Upload a Folder to GitHub
+1. Initialize Git in your project folder
+Open terminal/command prompt inside your project folder and run:
+git init ==> This makes your folder a local Git repository.
+2. Add your GitHub repository as remote
+First, create a new repository on GitHub
+Copy the repository URL (HTTPS or SSH). Example:
+https://github.com/your-username/repo-name.git
+Then run:
+git remote add origin https://github.com/your-username/repo-name.git
+3. Add files to staging
+git add .
+(. means add all files in the folder.)
+4. Commit your files
+git commit -m "First commit"
+5. Push to GitHub
+If your repo is empty (first push):
+git branch -M main
+git push -u origin main
+If repo already has files, you may need to pull first:
+git pull origin main --allow-unrelated-histories
+git push origin main
+
+
+📌 Example Workflow
+cd my-project-folder
+git init
+git remote add origin https://github.com/mahesh-devre/my-angular-app.git
+git add .
+git commit -m "Initial upload"
+git branch -M main
+git push -u origin main
+
+
+https://github.com/maheshdevre1/Study-Material.git
